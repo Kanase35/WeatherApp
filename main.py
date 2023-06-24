@@ -11,6 +11,7 @@ url = f"https://api.weatherapi.com/v1/current.json?key=da26abf4877d4b748d8101718
 r= requests.get(url)
 print(r.text)
 weatherDic = json.loads(r. text)
-say = (f'city name {city} temperature is {weatherDic["current"]["temp_c"]} degree celcious conditions are {weatherDic["current"]["condition"]["text"]} wind speed is {weatherDic["current"]["wind_kph"]} kilometer per hour and humidity is {weatherDic["current"]["humidity"]} percent and UV index is {weatherDic["current"]["uv"]} ')
-
+# {city} name {tempetature} {condition} {wind speed} {humidity} {uv- index}
+say = (f'city name {city} temperature is {weatherDic["current"]["temp_c"]} degree celcious conditions are {weatherDic["current"]["condition"]["text"]} wind speed is {weatherDic["current"]["wind_kph"]} kilometer per hour and humidity is {weatherDic["current"]["humidity"]} percent and UV index is {weatherDic["current"]["uv"]} .')
+print(say)
 speak.Speak(say)
